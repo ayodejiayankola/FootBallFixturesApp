@@ -11,4 +11,4 @@ iOS 13
 ## Getting Started
 Clone the Repository<br>
 Get the API Key from https://www.football-data.org <br>
-Put API Key in NetworkServiceProtocol.swift on line 14 <br>
+Put API Key in  Config.swift  on line 12 inside the NetworkServiceManager Folder<br>

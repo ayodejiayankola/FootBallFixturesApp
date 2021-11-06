@@ -38,12 +38,17 @@
 		51A874352736E1AC009D315B /* TodayFixtureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A874342736E1AC009D315B /* TodayFixtureView.swift */; };
 		51A874372736E1BC009D315B /* TablesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A874362736E1BC009D315B /* TablesView.swift */; };
 		51A8743C2736E247009D315B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8743B2736E247009D315B /* TabBarController.swift */; };
-		51A8743E2736E25D009D315B /* TopBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8743D2736E25D009D315B /* TopBarViewController.swift */; };
+		51A8743E2736E25D009D315B /* TopTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8743D2736E25D009D315B /* TopTabBarViewController.swift */; };
 		51A874402736E2DD009D315B /* CompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8743F2736E2DD009D315B /* CompetitionsViewController.swift */; };
 		51A874422736E305009D315B /* TodayFixtureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A874412736E305009D315B /* TodayFixtureViewController.swift */; };
 		51A874442736E31E009D315B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A874432736E31E009D315B /* TableViewController.swift */; };
 		51A874482736E953009D315B /* ScreenOne.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A874462736E953009D315B /* ScreenOne.png */; };
 		51A874492736E953009D315B /* ScreenTwo.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A874472736E953009D315B /* ScreenTwo.png */; };
+		51A8744D2736F060009D315B /* TeamsCollectionviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8744C2736F060009D315B /* TeamsCollectionviewCell.swift */; };
+		51A8744F2736F0BA009D315B /* TablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8744E2736F0BA009D315B /* TablesViewController.swift */; };
+		51A874512736F0CA009D315B /* FixturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A874502736F0CA009D315B /* FixturesViewController.swift */; };
+		51A874532736F0DA009D315B /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A874522736F0DA009D315B /* TeamsViewController.swift */; };
+		51A874552736F0E9009D315B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A874542736F0E9009D315B /* MyPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,12 +104,17 @@
 		51A874342736E1AC009D315B /* TodayFixtureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFixtureView.swift; sourceTree = "<group>"; };
 		51A874362736E1BC009D315B /* TablesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesView.swift; sourceTree = "<group>"; };
 		51A8743B2736E247009D315B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		51A8743D2736E25D009D315B /* TopBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarViewController.swift; sourceTree = "<group>"; };
+		51A8743D2736E25D009D315B /* TopTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBarViewController.swift; sourceTree = "<group>"; };
 		51A8743F2736E2DD009D315B /* CompetitionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsViewController.swift; sourceTree = "<group>"; };
 		51A874412736E305009D315B /* TodayFixtureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFixtureViewController.swift; sourceTree = "<group>"; };
 		51A874432736E31E009D315B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		51A874462736E953009D315B /* ScreenOne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenOne.png; sourceTree = "<group>"; };
 		51A874472736E953009D315B /* ScreenTwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenTwo.png; sourceTree = "<group>"; };
+		51A8744C2736F060009D315B /* TeamsCollectionviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCollectionviewCell.swift; sourceTree = "<group>"; };
+		51A8744E2736F0BA009D315B /* TablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewController.swift; sourceTree = "<group>"; };
+		51A874502736F0CA009D315B /* FixturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesViewController.swift; sourceTree = "<group>"; };
+		51A874522736F0DA009D315B /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		51A874542736F0E9009D315B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +291,7 @@
 				51A874322736E19C009D315B /* CompetitionsView.swift */,
 				51A874342736E1AC009D315B /* TodayFixtureView.swift */,
 				51A874362736E1BC009D315B /* TablesView.swift */,
+				51A8744C2736F060009D315B /* TeamsCollectionviewCell.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -308,6 +319,10 @@
 				51A8743F2736E2DD009D315B /* CompetitionsViewController.swift */,
 				51A874412736E305009D315B /* TodayFixtureViewController.swift */,
 				51A874432736E31E009D315B /* TableViewController.swift */,
+				51A874542736F0E9009D315B /* MyPageViewController.swift */,
+				51A874522736F0DA009D315B /* TeamsViewController.swift */,
+				51A874502736F0CA009D315B /* FixturesViewController.swift */,
+				51A8744E2736F0BA009D315B /* TablesViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -317,7 +332,7 @@
 			children = (
 				51A873D22736DE3A009D315B /* ViewController.swift */,
 				51A8743B2736E247009D315B /* TabBarController.swift */,
-				51A8743D2736E25D009D315B /* TopBarViewController.swift */,
+				51A8743D2736E25D009D315B /* TopTabBarViewController.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -463,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51A8744D2736F060009D315B /* TeamsCollectionviewCell.swift in Sources */,
 				51A873D32736DE3A009D315B /* ViewController.swift in Sources */,
 				51A8743C2736E247009D315B /* TabBarController.swift in Sources */,
 				51A874252736E0CA009D315B /* FixturesModel.swift in Sources */,
@@ -473,6 +489,7 @@
 				51A874292736E0E4009D315B /* TablesModel.swift in Sources */,
 				51A873CF2736DE3A009D315B /* AppDelegate.swift in Sources */,
 				51A874112736DF70009D315B /* BaseCollectionViewCell.swift in Sources */,
+				51A874512736F0CA009D315B /* FixturesViewController.swift in Sources */,
 				51A8742E2736E140009D315B /* TodayFixtureViewModel.swift in Sources */,
 				51A873D12736DE3A009D315B /* SceneDelegate.swift in Sources */,
 				51A8741D2736E077009D315B /* CompetitionModel.swift in Sources */,
@@ -484,15 +501,18 @@
 				51A874402736E2DD009D315B /* CompetitionsViewController.swift in Sources */,
 				51A874222736E0B0009D315B /* TeamDetailsModel.swift in Sources */,
 				51A874082736DEE0009D315B /* UIView+Layout.swift in Sources */,
+				51A874532736F0DA009D315B /* TeamsViewController.swift in Sources */,
 				51A8740D2736DF4C009D315B /* BaseView.swift in Sources */,
 				51A874202736E098009D315B /* TodayFixtureModel.swift in Sources */,
 				51A874152736E016009D315B /* NetworkServiceProtocol.swift in Sources */,
 				51A8740B2736DF2D009D315B /* BaseController.swift in Sources */,
 				51A8740F2736DF5E009D315B /* BaseTableViewCell.swift in Sources */,
+				51A8744F2736F0BA009D315B /* TablesViewController.swift in Sources */,
+				51A874552736F0E9009D315B /* MyPageViewController.swift in Sources */,
 				51A874272736E0D4009D315B /* TeamsModel.swift in Sources */,
 				51A874372736E1BC009D315B /* TablesView.swift in Sources */,
 				51A874022736DE77009D315B /* DataBaseManager.swift in Sources */,
-				51A8743E2736E25D009D315B /* TopBarViewController.swift in Sources */,
+				51A8743E2736E25D009D315B /* TopTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

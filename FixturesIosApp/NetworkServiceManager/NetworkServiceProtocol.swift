@@ -18,7 +18,8 @@ class NetworkService {
         let urlString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let request = NSMutableURLRequest(url: NSURL(string: urlString!)! as URL)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("09049cd854804973859b5f55ecdcf6ac", forHTTPHeaderField: "X-Auth-Token")
+        request.addValue(Config.API_KEY
+                         , forHTTPHeaderField: "X-Auth-Token")
         request.httpMethod = method
         session.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             if let data = data {

@@ -53,7 +53,7 @@ class CompetitionsView: BaseView, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let topBarViewController = TableViewController()
+        let topBarViewController = ViewController()
         let navigat = UINavigationController()
         self.window!.rootViewController = navigat
         navigat.pushViewController(topBarViewController, animated: true)
