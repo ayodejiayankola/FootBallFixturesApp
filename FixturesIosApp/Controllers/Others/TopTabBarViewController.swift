@@ -1,9 +1,8 @@
 //
-//  MainTab.swift
-//  SoccerTab
+//  TabBarController.swift
+//  FixturesIosApp
 //
-//  Created by OLALEKANAYODEJI on 06/11/2021.
-//
+//  Created by Ayodejii Ayankola on 02/11/2021.
 
 import Foundation
 import UIKit
@@ -45,8 +44,8 @@ class MainTabView: UIView {
             backImageButton.widthAnchor.constraint(equalToConstant: 50 ),
             backImageButton.heightAnchor.constraint(equalToConstant: 50 ),
             backImageButton.topAnchor.constraint(equalTo: topAnchor,constant: 50),
-            backImageButton.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 25),
-            titleBarName.leadingAnchor.constraint(equalTo: backImageButton.trailingAnchor,constant: 40),
+            backImageButton.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 5),
+            titleBarName.leadingAnchor.constraint(equalTo: backImageButton.trailingAnchor,constant: 10),
             
             titleBarName.centerXAnchor.constraint(equalTo: centerXAnchor)
              
@@ -79,8 +78,20 @@ class MainTabView: UIView {
        contentView.image = UIImage(named: "arrow-left-thin")
         contentView.contentMode = .left
        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.isUserInteractionEnabled = true
        return contentView
      }()
+    
+    
+//    let preArrowImage : UIImageView // also give it frame
+//    let singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
+//    preArrowImage.isUserInteractionEnabled = true
+//    preArrowImage.addGestureRecognizer(singleTap)
+
+    //Action
+    @objc func tapDetected() {
+        print("Imageview Clicked")
+    }
     
     lazy var tabContainerView: UIView = {
        let contentView = UIView()
@@ -94,7 +105,7 @@ class MainTabView: UIView {
         label.sizeToFit()
         label.textColor = .black
         label.contentMode = .center
-        label.font = .boldSystemFont(ofSize: 14)
+        label.font = .boldSystemFont(ofSize: 13)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -123,10 +134,10 @@ class MainTabView: UIView {
         let button = UIButton()
         button.tag = 1
         button.titleLabel?.font = UIFont.init(name: "Helvetica", size: 14)
-        button.setTitle("Tab 1", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.setTitleColor(.white, for: .selected)
-        button.backgroundColor = .cyan
+        button.setTitle("Table", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
+        button.setTitleColor(.gray, for: .selected)
+        button.backgroundColor = .white
         button.addTarget(self, action: #selector(tab1Clicled), for: .touchUpInside)
         return button
     }()
@@ -134,8 +145,8 @@ class MainTabView: UIView {
         let button = UIButton()
         button.tag = 2
         button.titleLabel?.font = UIFont.init(name: "Helvetica", size: 14)
-        button.setTitle("Tab 2", for: .normal)
-        button.setTitleColor(.cyan, for: .normal)
+        button.setTitle("Fixtures", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
 
         button.addTarget(self, action: #selector(tab2Clicled), for: .touchUpInside)
         return button
@@ -144,12 +155,21 @@ class MainTabView: UIView {
         let button = UIButton()
         button.tag = 3
         button.titleLabel?.font = UIFont.init(name: "Helvetica", size: 14)
-        button.setTitle("Tab 3", for: .normal)
-        button.setTitleColor(.cyan, for: .normal)
+        button.setTitle("Teams", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
+//        button.backgroundColor
         button.addTarget(self, action: #selector(tab3Clicled), for: .touchUpInside)
         return button
     }()
     
+//    @objc func goBackToHome(){
+//       // self.popViewController(animated: true)
+////        let navigat = UINavigationController()
+////        self.window!.rootViewController = navigat
+////
+////        navigat.popViewController(animated: true)
+//
+//    }
     @objc func tab1Clicled(){
         print("Overide tab1Clicled")
         updateButtons(selectedBtn: tab1, unselectedBtn1: tab2, unselectedBtn2: tab3)
@@ -160,19 +180,20 @@ class MainTabView: UIView {
     @objc func tab3Clicled(){
         updateButtons(selectedBtn: tab3, unselectedBtn1: tab2, unselectedBtn2: tab1)
     }
+    
 
     func updateButtons(selectedBtn: UIButton, unselectedBtn1: UIButton, unselectedBtn2: UIButton){
-            selectedBtn.setTitleColor(.white, for: .normal)
-            selectedBtn.setTitleColor(.white, for: .selected)
-            selectedBtn.backgroundColor = .cyan
+            selectedBtn.setTitleColor(.black, for: .normal)
+            selectedBtn.setTitleColor(.black, for: .selected)
+            selectedBtn.backgroundColor = .clear
             
-            unselectedBtn1.setTitleColor(.cyan, for: .normal)
-            unselectedBtn1.setTitleColor(.cyan, for: .selected)
-            unselectedBtn1.backgroundColor = .white
+            unselectedBtn1.setTitleColor(.gray, for: .normal)
+            unselectedBtn1.setTitleColor(.gray, for: .selected)
+            unselectedBtn1.backgroundColor = .clear
             
-            unselectedBtn2.setTitleColor(.cyan, for: .normal)
-            unselectedBtn2.setTitleColor(.cyan, for: .selected)
-            unselectedBtn2.backgroundColor = .white
+            unselectedBtn2.setTitleColor(.gray, for: .normal)
+            unselectedBtn2.setTitleColor(.gray, for: .selected)
+            unselectedBtn2.backgroundColor = .clear
         }
     
 }

@@ -7,13 +7,12 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 
 class CompetitionsView: BaseView, UITableViewDataSource,
                         UITableViewDelegate{
-    
     let competition = [CompetitionRoot]()
-    
     var competitionRoot: CompetitionRoot? {
         didSet{
             tableview.reloadData()
@@ -22,6 +21,7 @@ class CompetitionsView: BaseView, UITableViewDataSource,
     
     var tableview = UITableView()
     var setNavBarState: ((_ isHidden: Bool) -> Void)?
+    
     override func setup() {
         addSubview(tableview)
         tableview.fillSuperview()
@@ -32,20 +32,17 @@ class CompetitionsView: BaseView, UITableViewDataSource,
         tableview.register(CompetitionsCell.self, forCellReuseIdentifier: "CompetitionsCell")
     }
     
-    
     func updateDataSource(comp: CompetitionRoot){
-        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  competitionRoot?.competitions.count ?? 0
+        print(competitionRoot?.competitions.count)
+        return competitionRoot?.competitions.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CompetitionsCell") as! CompetitionsCell
         let backgroundView = UIView()
         cell.competitionName.text = competitionRoot?.competitions[indexPath.row].name
-        //        let id =  competitionRoot?.competitions[indexPath.row].id ?? 0
-        //        cell.homeClubScoreLbl.text  = String(id)
         backgroundView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
         cell.selectedBackgroundView = backgroundView
         cell.accessoryView = UIImageView(image:UIImage(named:"arrow")!)

@@ -34,7 +34,6 @@ class TodayFixtureView: BaseView, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(matchRoot?.count)
         return matchRoot?.count ?? 0
         
     }
@@ -42,17 +41,21 @@ class TodayFixtureView: BaseView, UITableViewDataSource,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MatchesCell") as! MatchesCell
         let backgroundView = UIView()
-        cell.homeClubNameLbl.text = matchRoot?.matches[indexPath.row].homeTeam.name
-        cell.awayClubNameLbl.text = matchRoot?.matches[indexPath.row].awayTeam.name
-        let homeScore = matchRoot?.matches[indexPath.row].score.fullTime.homeTeam ?? 0
-        cell.homeClubScoreLbl.text = String(homeScore)
-        let awayScore = matchRoot?.matches[indexPath.row].score.fullTime.awayTeam ?? 0
-        cell.awayClubScoreLbl.text = String(awayScore)
+
+
+        let homeScore = matchRoot?.matches[indexPath.row].score?.fullTime?.homeTeam.value
+        cell.homeClubScoreLbl.text = "\(homeScore ?? 0) "
+        let awayScore = matchRoot?.matches[indexPath.row].score?.fullTime?.awayTeam.value
+        cell.awayClubScoreLbl.text = "\(awayScore ?? 0)"
+        
+        cell.homeClubNameLbl.text = matchRoot?.matches[indexPath.row].homeTeam?.name
+        cell.awayClubNameLbl.text = matchRoot?.matches[indexPath.row].awayTeam?.name
         let matchDay = matchRoot?.matches[indexPath.row].matchday ?? 0
         cell.mdLbl.text = "MD: \(String(matchDay))"
         let date = matchRoot?.matches[indexPath.row].utcDate ?? ""
         let result =  DateManager.isValidDate(dateString: date)
-        cell.timeLbl.text = result
+        let dateResult = result.prefix(5)
+        cell.timeLbl.text = String(dateResult)
         backgroundView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
         cell.selectedBackgroundView = backgroundView
         return cell

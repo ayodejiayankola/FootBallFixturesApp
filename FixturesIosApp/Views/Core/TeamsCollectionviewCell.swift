@@ -1,5 +1,5 @@
 //
-//  Tab3CollectionViewCell.swift
+//  TeamsCollectionviewCell.swift
 //  FixturesIosApp
 //
 //  Created by Ayodejii Ayankola on 04/11/2021.
@@ -13,7 +13,7 @@ class TeamsCollectionviewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = .white
-        stackView.frame = CGRect(x: 5, y:0, width: contentView.frame.size.width - 10, height: contentView.frame.size.height)
+        stackView.frame = CGRect(x: 5, y:3, width: contentView.frame.size.width - 10, height: contentView.frame.size.height)
         stackView.addSubview(teamLogo)
         stackView.addSubview(teamName)
         contentView.addSubview(stackView)

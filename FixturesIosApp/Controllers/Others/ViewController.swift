@@ -7,13 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    
+class ViewController: UIViewController {    
     override var shouldAutorotate: Bool {
             return false
         }
-
         override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
             return .portrait
         }
@@ -31,12 +28,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .white
         let screen = UIScreen.main.bounds
                  mainTabView = MainTabView.init(frame: CGRect(origin: CGPoint(x: 0,y: 10), size: CGSize(width: screen.width, height: screen.height)))
         self.view.addSubview(mainTabView)
         self.addChild(pageVC)
         mainTabView.tabContainerView.addSubview(pageVC.view)
         NotificationCenter.default.addObserver(self, selector: #selector(self.changeIndex(_:)), name: NSNotification.Name(rawValue: "updateTabs"), object: nil)
+        let redirectBack = UITapGestureRecognizer(target: self, action: #selector(goBackToHome))
+        mainTabView.backImageButton.addGestureRecognizer(redirectBack)
         validateClick()
     }
     
@@ -47,6 +48,12 @@ class ViewController: UIViewController {
         mainTabView.tab2.addTarget(self, action: #selector(trigger2), for: .touchUpInside)
         mainTabView.tab3.addTarget(self, action: #selector(trigger3), for: .touchUpInside)
 
+    }
+    
+    
+    @objc func goBackToHome(){
+        let navigat = UINavigationController()
+        navigat.popViewController(animated: true)
     }
     
     @objc  func trigger2(){

@@ -53,8 +53,8 @@ class TeamsViewController: UIViewController,UICollectionViewDataSource, UICollec
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: (view.frame.width / 3 )-4  , height: (view.frame.width / 3 ) - 4)
-        layout.minimumLineSpacing = 5
-        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 4
+        layout.minimumInteritemSpacing = 4
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         guard let collectionView = collectionView else {
             return

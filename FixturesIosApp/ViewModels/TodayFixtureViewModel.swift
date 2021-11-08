@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol MatchRootDelegate: AnyObject {
     func DidFetchMatches(mathes: MatchRoot?)
@@ -15,11 +16,17 @@ class TodayFixtureViewModel {
     var delegate: MatchRootDelegate?
     
     func fetchMatches() {
-        let fullUrl = Config.baseUrl() + "matches"
-        NetworkService.fetch(with: fullUrl, method: "GET", type: MatchRoot.self) {  success, response in
+        let fullApiUrl = Config.baseUrl() + "matches"
+        NetworkService.fetch(with: fullApiUrl, method: "GET", type: MatchRoot.self) {  success, response in
             if success {
+                let realm = try! Realm()
                 let data = response as? MatchRoot
-                self.delegate?.DidFetchMatches(mathes: data)
+                try! realm.write {
+                    realm.deleteAll()
+                    realm.add(data!)
+                 }
+                let result = realm.objects(MatchRoot.self)
+                self.delegate?.DidFetchMatches(mathes: result[0])
             }
         }
     }

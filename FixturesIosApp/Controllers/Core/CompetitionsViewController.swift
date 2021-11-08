@@ -27,6 +27,7 @@ class CompetitionsViewController: BaseController, CompetitionRootDelegate {
     }
     func DidFetchCompetitions(competitions: CompetitionRoot?) {
         competitionsView.competitionRoot = competitions
+        
     }
 }
 

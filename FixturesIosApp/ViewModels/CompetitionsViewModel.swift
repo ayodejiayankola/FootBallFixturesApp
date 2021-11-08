@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol CompetitionRootDelegate:AnyObject {
     func DidFetchCompetitions(competitions: CompetitionRoot?)
@@ -17,12 +18,19 @@ class CompetitionsViewModel {
         let fullApiUrl = Config.baseUrl() + "competitions"
         NetworkService.fetch(with: fullApiUrl, method: "GET", type: CompetitionRoot.self) { success, response in
             if success {
-                print("output is \(response)")
+                
+                let realm = try! Realm()
                 let competitionData = response as? CompetitionRoot
-                self.competitionDelegate?.DidFetchCompetitions(competitions: competitionData)
+                try! realm.write {
+                    realm.deleteAll()
+                    realm.add(competitionData!)
+                 }
+                let result = realm.objects(CompetitionRoot.self)
+                self.competitionDelegate?.DidFetchCompetitions(competitions: result[0])
             }
         }
     }
 }
+
 
 

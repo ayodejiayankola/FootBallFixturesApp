@@ -8,18 +8,18 @@
 import Foundation
 
 // MARK: - Root
-struct TeamRoot: Codable {
-    let count: Int
-    let competition: Competition
-    let teams: [Team]
-}
-// MARK: - Team
-struct Team: Codable {
-    let id: Int
-    let name, shortName: String
-    let crestURL: String?
-    enum CodingKeys: String, CodingKey {
-        case id, name, shortName
-        case crestURL
-    }
-}
+//struct TeamRoot: Codable {
+//    let count: Int
+//    let competition: Competition
+//    let teams: [Team]
+//}
+//// MARK: - Team
+//struct Team: Codable {
+//    let id: Int
+//    let name, shortName: String
+//    let crestURL: String?
+//    enum CodingKeys: String, CodingKey {
+//        case id, name, shortName
+//        case crestURL
+//    }
+//}
