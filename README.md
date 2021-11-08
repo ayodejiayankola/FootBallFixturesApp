@@ -37,7 +37,7 @@ You can use CocoaPods to install YourLibrary by adding it to your Podfile:
 
 ```
 platform :ios, '9.0'
-use_frameworks! <br>
+use_frameworks!
 pod 'RealmSwift', '~>10' 
 ```
 
