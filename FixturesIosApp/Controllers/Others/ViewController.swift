@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  SoccerTab
 //
-//  Created by OLALEKANAYODEJI on 06/11/2021.
+//  Created by Ayodejii Ayankola on 06/11/2021.
 //
 
 import UIKit
