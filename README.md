@@ -8,6 +8,16 @@ Display Football Data such as today's Match, Competition list using football Dat
 macOS 10.15
 Xcode 11
 iOS 13
+
+## Installations
+
+### CocoaPods
+You can use CocoaPods to install YourLibrary by adding it to your Podfile:
+
+platform :ios, '9.0'
+use_frameworks! <br>
+pod 'RealmSwift', '~>10'
+
 ## Getting Started
 Clone the Repository<br>
 Get the API Key from https://www.football-data.org <br>
