@@ -8,14 +8,14 @@ Display Football Data such as today's Match, Competition list using football Dat
 ## Architecture 
 MVVM
 
-## Structure
-Manager
-Utilities
-NetworkManager
-Model
-ViewModel
-Controller
-View
+## Folder Structure
+Manager <br>
+Utilities <br>
+NetworkManager <br>
+Model <br>
+ViewModel <br>
+Controller <br>
+View <br>
 UnitTest
 
 
