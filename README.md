@@ -18,6 +18,16 @@ Controller <br>
 View <br>
 UnitTest
 
+## Features
+
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked="">Todays Match Screen + Live Data from endpoint</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked="">Competitions Screen + Live Data from endpoint</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked="">Table Screen</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked="">Fixtures Screen</li>
+  <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked="">Team Screen</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Competition Unit Test</li>
+</ul>
 
 
 ## Requirements
