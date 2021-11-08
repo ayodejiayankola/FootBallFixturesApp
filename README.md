@@ -25,14 +25,21 @@ macOS 10.15
 Xcode 11
 iOS 13
 
+## Usage 
+Clone the repository:
+
+``` git clone https://github.com/ayodejiayankola/FootBallFixturesApp.git ```
+
 ## Installations
 
 ### CocoaPods
 You can use CocoaPods to install YourLibrary by adding it to your Podfile:
 
+```
 platform :ios, '9.0'
 use_frameworks! <br>
-pod 'RealmSwift', '~>10'
+pod 'RealmSwift', '~>10' 
+```
 
 ## Getting Started
 Clone the Repository<br>
