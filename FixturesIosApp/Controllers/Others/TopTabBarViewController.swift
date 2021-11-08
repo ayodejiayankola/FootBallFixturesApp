@@ -79,15 +79,20 @@ class MainTabView: UIView {
         contentView.contentMode = .left
        contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.isUserInteractionEnabled = true
+        let redirectBack = UITapGestureRecognizer(target: self, action: #selector(goBackToHome))
+        contentView.addGestureRecognizer(redirectBack)
        return contentView
      }()
     
     
-//    let preArrowImage : UIImageView // also give it frame
-//    let singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
-//    preArrowImage.isUserInteractionEnabled = true
-//    preArrowImage.addGestureRecognizer(singleTap)
-
+        @objc func goBackToHome(){
+    
+            let topBarViewController = TabBarController()
+            let navigat = UINavigationController()
+            self.window!.rootViewController = navigat
+            navigat.pushViewController(topBarViewController, animated: true)
+    
+        }
     //Action
     @objc func tapDetected() {
         print("Imageview Clicked")
@@ -162,14 +167,6 @@ class MainTabView: UIView {
         return button
     }()
     
-//    @objc func goBackToHome(){
-//       // self.popViewController(animated: true)
-////        let navigat = UINavigationController()
-////        self.window!.rootViewController = navigat
-////
-////        navigat.popViewController(animated: true)
-//
-//    }
     @objc func tab1Clicled(){
         print("Overide tab1Clicled")
         updateButtons(selectedBtn: tab1, unselectedBtn1: tab2, unselectedBtn2: tab3)

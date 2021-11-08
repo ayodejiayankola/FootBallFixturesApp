@@ -36,8 +36,6 @@ class ViewController: UIViewController {
         self.addChild(pageVC)
         mainTabView.tabContainerView.addSubview(pageVC.view)
         NotificationCenter.default.addObserver(self, selector: #selector(self.changeIndex(_:)), name: NSNotification.Name(rawValue: "updateTabs"), object: nil)
-        let redirectBack = UITapGestureRecognizer(target: self, action: #selector(goBackToHome))
-        mainTabView.backImageButton.addGestureRecognizer(redirectBack)
         validateClick()
     }
     
@@ -49,13 +47,6 @@ class ViewController: UIViewController {
         mainTabView.tab3.addTarget(self, action: #selector(trigger3), for: .touchUpInside)
 
     }
-    
-    
-    @objc func goBackToHome(){
-        let navigat = UINavigationController()
-        navigat.popViewController(animated: true)
-    }
-    
     @objc  func trigger2(){
         pageVC.changeViewController(currentIndex: currentSelectedBtn, nextIndex: 1)
                 currentSelectedBtn=1
