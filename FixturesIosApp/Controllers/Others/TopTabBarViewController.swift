@@ -86,11 +86,11 @@ class MainTabView: UIView {
     
     
         @objc func goBackToHome(){
-    
-            let topBarViewController = TabBarController()
+            let mainTabViewController = TabBarController()
             let navigat = UINavigationController()
             self.window!.rootViewController = navigat
-            navigat.pushViewController(topBarViewController, animated: true)
+            navigat.pushViewController(mainTabViewController, animated: true)
+            navigat.dismiss(animated: true, completion: nil)
     
         }
     //Action
