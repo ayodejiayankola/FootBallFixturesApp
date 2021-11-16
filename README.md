@@ -31,8 +31,8 @@ UnitTest
 
 
 ## Requirements
-macOS 10.15
-Xcode 12
+macOS 10.15 <br>
+Xcode 12 <br>
 Minimum Deployment Target - iOS 13
 
 ## Usage 
