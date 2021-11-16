@@ -13,9 +13,11 @@ class BaseController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupStatusBarColor()
     }
     
+    @available(iOS 13.0, *)
     func setupStatusBarColor() {
         if let keyWindow = UIWindow.key {
             let statusBar = UIView(frame: keyWindow.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero)
