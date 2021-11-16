@@ -31,9 +31,15 @@ UnitTest
 
 
 ## Requirements
+
 macOS 10.15 <br>
 Xcode 12 <br>
 Minimum Deployment Target - iOS 13
+
+macOS 10.15
+Xcode 11
+iOS 13
+
 
 ## Usage 
 Clone the repository:
